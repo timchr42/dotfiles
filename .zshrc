@@ -1,13 +1,7 @@
 
-# Created by `userpath` on 2023-06-16 11:14:22
-export PATH="$PATH:/Users/timchristmann/.local/bin"
-
 # Source zsh plugins
 source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Alias for config files
-alias config="git --git-dir=$HOME/Repos/.dotfiles/dotfiles-personal/ --work-tree=$HOME"
 
 # Aliases for common dirs
 alias home="cd ~"
@@ -30,7 +24,7 @@ alias stat="git status"
 alias gdiff="git diff HEAD"
 alias vdiff="git difftool HEAD"
 alias log="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias cfg="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias cfg="git --git-dir=$HOME/Repos/.dotfiles/dotfiles-personal/ --work-tree=$HOME"
 alias push="git push"
 alias g="lazygit"
 
