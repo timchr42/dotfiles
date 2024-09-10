@@ -1,5 +1,9 @@
-# Ignore the karabiner config files
+.DS_Store
 .config/karabiner/
-
-# Ignore GitHub Copilot files
 .config/github-copilot/
+.config/sketchybar-backup/
+.config/gh
+.config/omf
+.config/tmux
+.config/xm1
+.config/iterm2
