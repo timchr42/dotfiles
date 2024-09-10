@@ -1,0 +1,5 @@
+# Ignore the karabiner config files
+.config/karabiner/
+
+# Ignore GitHub Copilot files
+.config/github-copilot/
