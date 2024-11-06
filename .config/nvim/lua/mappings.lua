@@ -14,6 +14,10 @@ map("n", "<leader>ff", "<cmd> Telescope <cr>")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Keymaps to indent/outdent in visual mode
+map("v", ">", ">gv")
+map("v", "<", "<gv")
+
 map("n", "J", "mzJ`z")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
@@ -31,3 +35,9 @@ map("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- map("n", "<leader>ch", "<cmd>!chmod +x %<CR>", { silent = true })
+
+map('i', '<Right>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
