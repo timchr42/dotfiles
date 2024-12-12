@@ -1,3 +1,4 @@
+add_newline = false
 
 [character]
 success_symbol = '[ ❯](bold green)'
@@ -16,7 +17,10 @@ only_detached = false
 disabled = true
 
 [python]
-disabled = true
+disabled = false
+format = 'via [${symbol}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bold #76cce0"
 
 [cmake]
 disabled = true
