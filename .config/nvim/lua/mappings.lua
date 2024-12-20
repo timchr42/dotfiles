@@ -28,8 +28,8 @@ map("x", "<leader>p", [["_dP]])
 
 map({"n", "v"}, "<leader>d", "\"_d")
 
-map("n", "<C-k>", "<cmd>cnext<CR>zz")
-map("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- map("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- map("n", "<C-j>", "<cmd>cprev<CR>zz")
 map("n", "<leader>k", "<cmd>lnext<CR>zz")
 map("n", "<leader>j", "<cmd>lprev<CR>zz")
 

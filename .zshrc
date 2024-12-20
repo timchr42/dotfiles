@@ -4,15 +4,17 @@ source $(brew --prefix)/share/zsh-fast-syntax-highlighting/fast-syntax-highlight
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Aliases for common dirs
-alias home="cd ~"
+alias h="cd ~"
+alias hc="h && c"
 
 # System Aliases
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias x="exit"
 alias c="clear"
 alias vim="nvim"
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias le="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # Git Aliases
 alias add="git add"
@@ -27,7 +29,7 @@ alias push="git push"
 alias g="lazygit"
 
 eval "$(starship init zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd z zsh)"
 
 alias ssh="TERM=xterm-256color ssh"
 
@@ -126,3 +128,7 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+# add adb tools to shell (android platform tools)
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+

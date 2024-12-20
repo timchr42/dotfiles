@@ -6,7 +6,7 @@ error_symbol = "[ x](bold red)"
 vicmd_symbol = "[ V](bold green)"
 
 [git_status]
-disabled = false
+disabled = true
 
 [git_commit]
 commit_hash_length = 7
@@ -30,5 +30,5 @@ read_only = "(read only)"
 truncation_length = 4
 
 [git_metrics]
-disabled = false
+disabled = true
 format = '([+$added]($added_style)) ([-$deleted]($deleted_style)) '
