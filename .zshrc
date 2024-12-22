@@ -33,15 +33,6 @@ eval "$(zoxide init --cmd z zsh)"
 
 alias ssh="TERM=xterm-256color ssh"
 
-alias n="nnn"
-function nnn () {
-  command nnn "$@"
-
-  if [ -f "$NNN_TMPFILE" ]; then
-          . "$NNN_TMPFILE"
-  fi
-}
-
 function kill () {
   command kill -KILL $(pidof "$@")
 }
@@ -128,6 +119,18 @@ _fzf_comprun() {
     *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
   esac
 }
+
+# --- yazi ---
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+export EDITOR=nvim
 
 # add adb tools to shell (android platform tools)
 export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
